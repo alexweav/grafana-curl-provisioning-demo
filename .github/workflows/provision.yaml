@@ -5,7 +5,7 @@ on:
 
 jobs:
   push-resources:
-    name: Push resources to Grafana.
+    name: Push resources to Grafana
     runs-on: ubuntu-latest
 
     steps:
