@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push-resources:
+    name: Push resources to Grafana.
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Post Rules
+      shell: bash
+      run: ./sync.sh
+      env:
+        GF_API_KEY: ${{ secrets.GF_API_KEY }}
